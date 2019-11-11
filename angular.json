@@ -119,6 +119,41 @@
           }
         }
       }
+    },
+    "ngx-boxholder": {
+      "projectType": "library",
+      "root": "projects/ngx-boxholder",
+      "sourceRoot": "projects/ngx-boxholder/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-boxholder/tsconfig.lib.json",
+            "project": "projects/ngx-boxholder/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-boxholder/src/test.ts",
+            "tsConfig": "projects/ngx-boxholder/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-boxholder/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-boxholder/tsconfig.lib.json",
+              "projects/ngx-boxholder/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "box-holder"
 }

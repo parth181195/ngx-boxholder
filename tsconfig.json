@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-boxholder": [
+        "dist/ngx-boxholder"
+      ],
+      "ngx-boxholder/*": [
+        "dist/ngx-boxholder/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
